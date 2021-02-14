@@ -1,8 +1,6 @@
-﻿using MaplestoryTodo.Views;
-
+﻿using System.Windows;
+using MaplestoryTodo.Views;
 using Prism.Ioc;
-
-using System.Windows;
 
 namespace MaplestoryTodo
 {

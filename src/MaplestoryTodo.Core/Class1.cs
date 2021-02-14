@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace MaplestoryTodo.Core
+﻿namespace MaplestoryTodo.Core
 {
     public class Class1
     {
