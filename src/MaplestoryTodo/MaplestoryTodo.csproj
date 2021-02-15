@@ -1,12 +1,12 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
     <AssemblyName>MaplestoryTodo</AssemblyName>
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
     <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
-    <SignAssembly>false</SignAssembly>
+    <SignAssembly>true</SignAssembly>
     <Authors>Pilgyeong Gwak</Authors>
     <Company />
     <Product>Maplestory Todo</Product>
@@ -14,8 +14,10 @@
     <PackageProjectUrl>https://github.com/pid011/maplestory-todo</PackageProjectUrl>
     <RepositoryUrl>https://github.com/pid011/maplestory-todo</RepositoryUrl>
     <AssemblyVersion>0.0.1.0</AssemblyVersion>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="HandyControls" Version="3.1.1" />
     <PackageReference Include="Prism.DryIoc" Version="8.0.0.1909" />
   </ItemGroup>
   <ItemGroup>
@@ -23,5 +25,8 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MaplestoryTodo.Core\MaplestoryTodo.Core.csproj" />
   </ItemGroup>
 </Project>
