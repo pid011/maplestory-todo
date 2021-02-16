@@ -1,4 +1,5 @@
-﻿using System.Windows.Controls;
+﻿using System.Diagnostics;
+using System.Windows.Controls;
 using MaplestoryTodo.ViewModels;
 
 namespace MaplestoryTodo.Views
@@ -13,10 +14,10 @@ namespace MaplestoryTodo.Views
             InitializeComponent();
         }
 
-        private void MenuItem_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void TodoItem_Loaded(object sender, System.Windows.RoutedEventArgs e)
         {
-            var item = DataContext as TodoViewModel;
-            item.Todos.RemoveAt(item.SelectedTodoIndex);
+            Debug.WriteLine(TodoListBox.SelectedItem.GetType().ToString());
+            (TodoListBox.SelectedItem as TodoItemViewModel).Name = "Test";
         }
     }
 }

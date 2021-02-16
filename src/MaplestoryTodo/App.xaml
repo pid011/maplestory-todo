@@ -1,10 +1,11 @@
-﻿<prism:PrismApplication
+﻿<Application
     x:Class="MaplestoryTodo.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:hc="https://handyorg.github.io/handycontrol"
     xmlns:local="clr-namespace:MaplestoryTodo"
-    xmlns:prism="http://prismlibrary.com/">
+    xmlns:view="clr-namespace:MaplestoryTodo.Views"
+    StartupUri="Views/MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -15,4 +16,4 @@
             <!--  Other app resources here  -->
         </ResourceDictionary>
     </Application.Resources>
-</prism:PrismApplication>
+</Application>

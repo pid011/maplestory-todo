@@ -51,41 +51,7 @@
             </ListBox.ItemContainerStyle>
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="Auto" />
-                        </Grid.ColumnDefinitions>
-                        <CheckBox
-                            x:Name="TodoCheckBox"
-                            Grid.Column="0"
-                            Margin="0,0,0,0"
-                            IsChecked="{Binding IsCompleted}" />
-                        <TextBlock
-                            x:Name="TodoNameTextBlock"
-                            Grid.Column="1"
-                            Margin="10,0,0,0"
-                            HorizontalAlignment="Left"
-                            Style="{Binding NameStyle}"
-                            Text="{Binding Name}"
-                            TextWrapping="Wrap" />
-
-                        <Grid.ContextMenu>
-                            <ContextMenu x:Name="TodoContextMenu">
-                                <MenuItem
-                                    Click="MenuItem_Click"
-                                    Header="Delete" />
-                            </ContextMenu>
-                        </Grid.ContextMenu>
-                    </Grid>
-                    <DataTemplate.Triggers>
-                        <DataTrigger
-                            Binding="{Binding IsCompleted}"
-                            Value="True">
-                            <Setter TargetName="TodoNameTextBlock" Property="TextDecorations" Value="Strikethrough" />
-                        </DataTrigger>
-                    </DataTemplate.Triggers>
+                    <local:TodoItem Loaded="TodoItem_Loaded" />
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
@@ -108,7 +74,7 @@
                 Margin="10,0,0,0"
                 HorizontalAlignment="Center"
                 hc:IconElement.Geometry="{StaticResource AddGeometry}"
-                Command="{Binding AddTodoItemCommand}"
+                Command="{Binding TodoItemAddCommand}"
                 TabIndex="0" />
         </hc:SimpleStackPanel>
     </Grid>

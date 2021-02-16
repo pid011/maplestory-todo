@@ -106,25 +106,25 @@
                 x:Name="DailyQuestTab"
                 Header="일일 퀘스트"
                 TabIndex="2">
-                <local:Todo x:Name="DailyQuestTodo" />
+                <local:Todo x:Name="DailyQuestTodoRegion" />
             </hc:TabItem>
             <hc:TabItem
                 x:Name="DailyBossTab"
                 Header="일일 보스"
                 TabIndex="3">
-                <local:Todo x:Name="DailyBossTodo" />
+                <local:Todo x:Name="DailyBossTodoRegion" />
             </hc:TabItem>
             <hc:TabItem
                 x:Name="WeekQuestTab"
                 Header="주간 퀘스트"
                 TabIndex="4">
-                <local:Todo x:Name="WeekQuestTodo" />
+                <local:Todo x:Name="WeekQuestTodoRegion" />
             </hc:TabItem>
             <hc:TabItem
                 x:Name="WeekBossTab"
                 Header="주간 보스"
                 TabIndex="5">
-                <local:Todo x:Name="WeekBossTodo" />
+                <local:Todo x:Name="WeekBossTodoRegion" />
             </hc:TabItem>
         </hc:TabControl>
     </Grid>
